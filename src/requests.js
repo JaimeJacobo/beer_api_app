@@ -6,7 +6,7 @@ const my_request = (res_int, url_int)=>{
   const url = url_int
   request({ url: url, json: true}, (error ,response)=>{
     if(!error){
-      res_int.render('one_beer', {
+      res_int.render('index', {
         name: response.body[0].name
       })      
     } else {
