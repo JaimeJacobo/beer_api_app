@@ -32,12 +32,17 @@ app.get('/', (req, res)=>{
 
 app.get('/random-beer', (req, res)=>{
   const url = main_url + 'random'
-  my_requests.get_info(res, url)
+  my_requests.get_info(res, url, 'index')
 })
 
 app.get('/first-beer', (req, res)=>{
   const url = main_url + '1'
-  my_requests.get_info(res, url)
+  my_requests.get_info(res, url, 'index')
+})
+
+app.get('/all-beers', (req, res)=>{
+    let url = main_url
+    my_requests.get_info(res, url, 'all-beers')
 })
 
 app.get('*', (req, res)=>{
