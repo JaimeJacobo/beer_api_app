@@ -25,9 +25,7 @@ hbs.registerPartials(partialsPath)
 const main_url = 'https://api.punkapi.com/v2/beers/'
 
 app.get('/', (req, res)=>{
-  res.render('index', {
-    name: 'This is the main page'
-  })
+  res.render('index', {})
 })
 
 app.get('/random-beer', (req, res)=>{
@@ -37,7 +35,7 @@ app.get('/random-beer', (req, res)=>{
 
 app.get('/first-beer', (req, res)=>{
   const url = main_url + '1'
-  my_requests.get_info(res, url, 'index')
+  my_requests.get_info(res, url, 'one-beer-page')
 })
 
 app.get('/all-beers', (req, res)=>{
