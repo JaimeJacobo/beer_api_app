@@ -14,13 +14,13 @@
     <h1>{{name}}</h1>
     <p class="one_beer_section__tagline">{{tagline}}</p>
     <img src="{{image}}" alt="Beer Image">
-      <p>Ingredients</p>
-    <ul class="one_beer_section__ingredients">
-      <li>Malt: {{#each malt}} {{this}}, {{/each}}</li>
-      <li>Hops: {{#each hops}} {{this}}, {{/each}}</li>
-      <li>Yeast: {{#each yeast}} {{this}}, {{/each}}</li>
+      <p class="one_beer_section__ingredients_header">Ingredients</p>
+    <ul>
+      <li><strong>Malt</strong>: {{#each malt}} {{this}}, {{/each}}</li>
+      <li><strong>Hops</strong>: {{#each hops}} {{this}}, {{/each}}</li>
+      <li><strong>Yeast</strong>: {{yeast}}</li>
     </ul>
-    <p class="one_beer_section__tips">{{tips}}</p>
+    <p class="one_beer_section__tips">"{{tips}}"</p>
   </section>
   {{>footer}}
 

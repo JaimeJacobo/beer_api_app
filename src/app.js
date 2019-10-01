@@ -33,9 +33,9 @@ app.get('/random-beer', (req, res)=>{
   my_requests.get_info(res, url, 'one-beer-page')
 })
 
-app.get('/all-beers', (req, res)=>{
+app.get('/first-25-beers', (req, res)=>{
   let url = main_url
-  my_requests.get_info(res, url, 'all-beers')
+  my_requests.get_info(res, url, 'first-25-beers')
 })
 
 app.get('*', (req, res)=>{

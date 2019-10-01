@@ -1,8 +1,11 @@
 $tablet-large: 1023px;
 
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap');
+
 body {
   background-color: #000;
   color: #FFF;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .block{
@@ -49,6 +52,31 @@ body {
 
   & img {
     margin-top: 2em;
-    width: 180px;
+    width: 100px;
   }
+
+  &__ingredients_header {
+    font-size: 20px;
+    margin-top: 1em;
+    text-decoration: underline;
+  }
+
+  & ul {
+    text-align: left;
+
+    & strong {
+      text-decoration: underline;
+    }
+  }
+
+  &__tips {
+    font-style: italic;
+    margin-top: 2em;
+  }
+}
+
+.footer {
+  font-size: 14px;
+  margin-top: 3em;
+  margin-left: 2em;
 }

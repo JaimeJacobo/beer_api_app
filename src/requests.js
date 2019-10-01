@@ -6,7 +6,6 @@ const get_info = (res_int, url_int, page_int)=>{
   let arrayOfNames = [];
   let arrayOfMalt = [];
   let arrayOfHops = [];
-  let arrayOfYeast = [];
   const url = url_int
   request({ url: url, json: true}, (error ,response)=>{
     if(!error){ 
@@ -20,12 +19,11 @@ const get_info = (res_int, url_int, page_int)=>{
       }
 
       for(let i = 0; i < response.body[0].ingredients.hops.length; i++){
-        arrayOfHops.push(response.body[0].ingredients.hops[i].name)
+        if(!arrayOfHops.includes(response.body[0].ingredients.hops[i].name)){
+          arrayOfHops.push(response.body[0].ingredients.hops[i].name)          
+        }
       }
 
-      arrayOfYeast.push(response.body[0].ingredients.yeast)
-
-      
       res_int.render(page_int, {
         array: arrayOfNames,
         name: response.body[0].name,
@@ -33,7 +31,7 @@ const get_info = (res_int, url_int, page_int)=>{
         image: response.body[0].image_url,
         malt: arrayOfMalt,
         hops: arrayOfHops,
-        yeast: arrayOfYeast,
+        yeast: response.body[0].ingredients.yeast,
         tips: response.body[0].brewers_tips
       })      
     } else {
