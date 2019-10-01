@@ -75,6 +75,35 @@ body {
   }
 }
 
+.first_25_beers_section{
+
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+  flex-wrap: wrap;
+  padding: 2em;
+
+  & div {
+    text-align: center;
+    width: 500px;
+    padding-top: 6em;
+  }
+
+  p:nth-child(1){
+    font-size: 30px;
+  }
+
+  p:nth-child(2){
+    font-size: 20px;
+  }
+
+  & img {
+    width: 100px;
+    // height: 300px;
+  }
+
+}
+
 .footer {
   font-size: 14px;
   margin-top: 3em;

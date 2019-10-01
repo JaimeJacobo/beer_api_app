@@ -3,7 +3,8 @@ const chalk = require('chalk')
 
 
 const get_info = (res_int, url_int, page_int)=>{
-  let arrayOfNames = [];
+
+  let beersArray = [];
   let arrayOfMalt = [];
   let arrayOfHops = [];
   const url = url_int
@@ -11,7 +12,11 @@ const get_info = (res_int, url_int, page_int)=>{
     if(!error){ 
 
       for(let i = 0; i < response.body.length; i++){
-        arrayOfNames.push(response.body[i].name)
+        beersArray.push({
+          name: response.body[i].name,
+          image: response.body[i].image_url,
+          tagline: response.body[i].tagline
+        })
       }
 
       for(let i = 0; i < response.body[0].ingredients.malt.length; i++){
@@ -25,7 +30,8 @@ const get_info = (res_int, url_int, page_int)=>{
       }
 
       res_int.render(page_int, {
-        array: arrayOfNames,
+        beersArray: beersArray,
+        // beersObject: beersObject,
         name: response.body[0].name,
         tagline: response.body[0].tagline,
         image: response.body[0].image_url,
