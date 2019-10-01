@@ -10,7 +10,18 @@
 </head>
 <body>
   {{>header}}
-    <p>{{name}}</p>
+  <section class="one_beer_section">
+    <h1>{{name}}</h1>
+    <p class="one_beer_section__tagline">{{tagline}}</p>
+    <img src="{{image}}" alt="Beer Image">
+      <p>Ingredients</p>
+    <ul class="one_beer_section__ingredients">
+      <li>Malt: {{#each malt}} {{this}}, {{/each}}</li>
+      <li>Hops: {{#each hops}} {{this}}, {{/each}}</li>
+      <li>Yeast: {{#each yeast}} {{this}}, {{/each}}</li>
+    </ul>
+    <p class="one_beer_section__tips">{{tips}}</p>
+  </section>
   {{>footer}}
 
   {{!-- scripts --}}

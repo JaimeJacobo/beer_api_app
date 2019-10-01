@@ -35,3 +35,20 @@ body {
     margin-top: 4em;
   }
 }
+
+.one_beer_section {
+
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3em;
+
+  &__tagline {
+    font-size: 25px;
+  }
+
+  & img {
+    margin-top: 2em;
+    width: 180px;
+  }
+}

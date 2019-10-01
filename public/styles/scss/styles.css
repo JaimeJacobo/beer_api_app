@@ -43,4 +43,20 @@ body {
 .index_section span {
   margin-top: 4em;
 }
+
+.one_beer_section {
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 3em;
+}
+
+.one_beer_section__tagline {
+  font-size: 25px;
+}
+
+.one_beer_section img {
+  margin-top: 2em;
+  width: 180px;
+}
 /*# sourceMappingURL=styles.css.map */
