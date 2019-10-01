@@ -8,21 +8,39 @@ body {
 }
 
 .index_section {
-  height: calc(100vh - 56px);
-  background-image: url("../../images/beer.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.index_section div {
-  margin: 0 auto;
-  margin-left: 50%;
-  width: 30%;
-  text-align: center;
-  padding-top: 10em;
+@media screen and (max-width: 1023px) {
+  .index_section {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+.index_section img {
+  height: calc(100vh - 56px);
+}
+
+@media screen and (max-width: 1023px) {
+  .index_section img {
+    height: inherit;
+    width: 100%;
+  }
+}
+
+.index_section__content {
+  padding: 2em;
 }
 
 .index_section span {
-  margin-top: 2em;
+  margin-top: 4em;
 }
 /*# sourceMappingURL=styles.css.map */
