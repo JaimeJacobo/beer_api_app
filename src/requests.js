@@ -31,7 +31,6 @@ const get_info = (res_int, url_int, page_int)=>{
 
       res_int.render(page_int, {
         beersArray: beersArray,
-        // beersObject: beersObject,
         name: response.body[0].name,
         tagline: response.body[0].tagline,
         image: response.body[0].image_url,
